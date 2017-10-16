@@ -104,6 +104,7 @@ p#p-home{
 }
 
 /* about.html */
+
 img#about_bob{
     width:200px;
     display:block;
@@ -114,11 +115,13 @@ img#about_bob{
 
 h2#h2-about{
     float:left;
+    margin-bottom:0px;
 }
 
 p#p-about{
     float:left;
     width:75%;
+    margin-top:10px;
 }
 /* Products.html */
 
@@ -148,7 +151,8 @@ figcaption{
     text-align:center;
     padding-bottom: 10px;
     font-family: sans-serif;
-    font-size:14px; 
+    font-size:14px;
+    font-weight:600;
 }
 
 /* contact.html */
