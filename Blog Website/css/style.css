@@ -1,4 +1,5 @@
 /* Style for Tucker's blog website */
+
 /* Reset */
 html,body,div,h1,h2,h3,h4,h5,h6,p,ul,ol,li{
     margin: 0;
@@ -8,19 +9,43 @@ html,body,div,h1,h2,h3,h4,h5,h6,p,ul,ol,li{
 /* Univeral Style */
 
 body{
-    background-color: black;
+    background-color: darkgray;
 }
 
-#container{
-    background-color: beige;
-    width: 300px;
+div#container{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 100%;
+    background-color: lightgrey;
+}
+
+header#BlogHead{
+    width: 100%;
+    font-family:sans-serif;
+    height: 300px;
+    text-align: center;
+    background-color: firebrick;
+}
+
+/* Blog Post */
+
+div#BlogPost{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: dimgrey;
+    box-shadow: 3px 3px 3px grey;
+    margin:15px 0;
+    padding:10px;
+}
+
+img#PostImg{
+    display:block;
+    margin 5px;
+    width:150px;
+    height: 150px;
+    background-color: white;
     
-}
-
-h1{
-    color:brown;
-}
-
-p{
-    color:blue;
 }
