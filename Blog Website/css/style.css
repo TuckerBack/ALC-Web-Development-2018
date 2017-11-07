@@ -26,6 +26,7 @@ header#BlogHead{
     height: 300px;
     text-align: center;
     background-color: firebrick;
+    font-family: 'Anton', sans-serif;
 }
 
 /* Blog Post */
@@ -37,15 +38,43 @@ div#BlogPost{
     width: 100%;
     background-color: dimgrey;
     box-shadow: 3px 3px 3px grey;
-    margin:15px 0;
-    padding:10px;
+    margin: 15px 0;
+    padding: 10px;
 }
 
 img#PostImg{
-    display:block;
+    align-self: flex-start;
+    display: block;
     margin 5px;
-    width:150px;
+    width: 150px;
     height: 150px;
     background-color: white;
-    
 }
+
+div#PostBody{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0 5px;
+    font-family: 'Exo 2', sans-serif;
+}
+
+h2#PostTitle{
+    align-self: auto;
+    font-family: 'Anton', sans-serif;
+    color: maroon;
+}
+
+h5#PostStamp{
+    color: #640000;
+}
+
+p#PostText{
+    font-size: 2em;
+}
+
+
+
+
+
+
