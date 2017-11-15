@@ -21,6 +21,8 @@ div#container{
 }
 
 header#BlogHead{
+    display:flex;
+    justify-content: center;
     width: 100%;
     font-family:sans-serif;
     height: 300px;
@@ -29,6 +31,10 @@ header#BlogHead{
     font-family: 'Anton', sans-serif;
 }
 
+header h1{
+    align-self: center;
+    font-size: 4em;
+}
 /* Blog Post */
 
 div#BlogPost{
@@ -55,7 +61,7 @@ div#PostBody{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    margin: 0 5px;
+    margin: 0 10px;
     font-family: 'Exo 2', sans-serif;
 }
 
@@ -63,6 +69,7 @@ h2#PostTitle{
     align-self: auto;
     font-family: 'Anton', sans-serif;
     color: maroon;
+    font-size: 2em;
 }
 
 h5#PostStamp{
@@ -70,7 +77,8 @@ h5#PostStamp{
 }
 
 p#PostText{
-    font-size: 2em;
+    font-size: 1.15em;
+    color:#640000;
 }
 
 
