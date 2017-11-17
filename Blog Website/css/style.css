@@ -81,6 +81,11 @@ p#PostText{
     color:#640000;
 }
 
+video#PostVid{
+    width: 500px;
+    height: auto;
+}
+
 
 
 
