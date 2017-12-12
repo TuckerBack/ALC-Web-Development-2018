@@ -24,7 +24,7 @@ div#container{
 }
 
 header{
-    display:flex;
+    display: flex;
     flex-direction: row;
     justify-content: flex-start;
     background-color: #454545;
@@ -39,15 +39,15 @@ header img#profile_img{
     border-radius: 100%;
     background-color: limegreen;
     align-self: flex-end;
-    margin-left:16px;
+    margin-left: 16px;
 }
 
 header div#profile_info{
-    display:flex;
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-self: flex-end;
-    margin-left:32px;
+    margin-left: 32px;
 }
 
 div#profile_info h2{
@@ -80,7 +80,7 @@ nav li{
 nav li a{
     text-decoration: none;
     font-family: sans-serif;
-    color:green;
+    color: green;
 }
 
 div#content{
@@ -109,23 +109,41 @@ div#content div.post img.ppp{
     height: 120px;
 }
 
-div#content div.post h3.pnp{
+div#content div.post-info {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     order: 2;
+    width: 75%;
+} 
+
+div#content div.post h3.pnp{
+    order: 1;
     width: 60%;
     height: 10%;
-    margin: 6px;
+    margin: 6px 0;
 }
 
 div#content div.post p.time-stamp{
+    order: 2;
+    font-size: 0.8em;
+    font-weight: 600;
+    color: limegreen;
+}
+
+div#content div.post div.post-foot{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     order: 3;
 }
 
-div#content div.post h5.p-comments{
-    order:4
+div#content div.post div.post-foot h5.p-comments{
+    order: 1;
 }
 
-div#content div.post h5.p-likes{
-    order:5
+div#content div.post div.post-foot h5.p-likes{
+    order: 2;
 }
 
 footer{
