@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Adventure Game</title>
+    </head>
+    <body>
+        <h1> Adventure Game v0.1</h1>
+        <p>By: Tucker Back</p>
+        <script>
+            Start();
+            function Start(){
+                var playerName = prompt("What is your name explorer?");
+                alert("Welcome to Jamanji " + playerName);
+                var beginAdv = confirm("Are you ready to begin your adventure?");
+                
+                if(beginAdv){
+                    Jungle_Camp();
+                }
+                else{
+                    alert("But Jamanji needs you to save it!");
+                }
+                
+            }
+            
+            function Jungle_Camp(){
+                var jungleCam = prompt("You arrive at a Jungle Camp. There are a few other explorers in the camp. You can see a rashions tent, a weapons tent, a medical tent, and a path that leads into the jungle. You can A. go to rashions tent B. go to weapons tent C. go to medical tent D. go to jungle trail ").toLowerCase();
+                
+                if(jungleCam == "rashions tent" || jungleCam == "go to rashions tent"){
+                    alert("there is a little table with rashions");
+                    Jungle_Camp();
+                }
+                else if (jungleCam == "weapons tent" ||jungleCam == "go to weapons tent"){
+                    alert("You enter the weapons tent and you see a gun, a knife, and a hatchet");
+                    Jungle_Camp();
+                }
+                else if(jungleCam == "medical tent" || jungleCam == "go to medical tent"){
+                    alert("You find a medical kit");
+                    Jungle_Camp();
+                }
+                else if(jungleCam == "jungle trail" || "go to jungle trail"){
+                    Jungle_Trail();
+                 } 
+                else {
+                    alert("I don't understand " + jungleCam);
+                    Jungle_Trail();
+                }
+                
+            }
+            
+            function Jungle_Trail(){
+                var jungleTrail = prompt("You begin your walk through the Jungle and find a fork in the road. You can go straight, to the right path, to the left path, or turn back").toLowerCase();
+                
+                if (jungleTrail == "straight" || jungleTrail == "go straight"){
+                    alert("You continue down the straight part of the trail.");  
+                }
+            }
+            
+            
+            
+            
+        </script>
+    </body>
+</html>
