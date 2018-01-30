@@ -2,17 +2,32 @@
 <html lang="en">
     <head>
         <title>Adventure Game</title>
+       <link href="style.css" rel="stylesheet" type="text/css">
     </head>
     <body>
         <h1> Adventure Game v0.1</h1>
         <p>By: Tucker Back</p>
+    </body>
         <script>
             
             Jungle_Camp();
             
+            var inventory = {
+                jamanjiGem:0,
+                sword:0,
+                boomerang:0,
+                coins:10,
+            }
+            
+            var player = {
+                firstname:"",
+                thirst:"",
+                lives:3,
+            }
+            
             function Start(){
-                var playerName = prompt("What is your name explorer?");
-                alert("Welcome to Jamanji " + playerName);
+                player.firstname = prompt("What is your name explorer?");
+                alert("Welcome to Jamanji " + player.firstname);
                 var beginAdv = confirm("Are you ready to begin your adventure?");
                 
                 if(beginAdv){
@@ -25,7 +40,8 @@
             }
             
             function Jungle_Camp(){
-                var jungleCam = prompt("You arrive at a Jungle Camp. There are a few other explorers in the camp. You need to be the one to find the gem and return it to the Jaguar statue. You can see three paths, one leads to the north, one leads to the east, and one leads to the west. You can 1. go north 2. go east 3. go west").toLowerCase();
+                
+                var jungleCam = prompt("You arrive at a Jungle Camp. There are a few other explorers in the camp. You need to be the one to find the gem and return it to the Jaguar statue. You can see three paths, one leads to the north, one leads to the east, and one leads to the west.\n You can \n 1. go north \n 2. go east \n 3. go west").toLowerCase();
                 
                 if(jungleCam == "go north"){
                     Trail_2();
@@ -38,7 +54,7 @@
                 } 
                 else{
                     alert("I don't understand " + jungleCam);
-                    Jungle_Trail();
+                    Jungle_Camp();
                 }
                 
             }
@@ -52,15 +68,18 @@
             }
             
             function Trail_2(){
-                var trail2 = prompt("You have come to a fork in the path. There is a sign that says go right to the tree house and go left to the river. You can 1. go to the tree house 2. go to the river").toLowerCase();
+                var trail2 = prompt("You have come to a fork in the path. There is a sign that says go right to the tree house and go left to the river. \n You can \n 1. go to the tree house \n 2. go to the river").toLowerCase();
                 
                 if (trail2 == "go to the tree house"){
-                    
+                    Tree_House();
+                }
+                else if (trail2 == "go to the river"){
+                    River();
                 }
             }
             
             function Trail_3(){
-                var trail3 = prompt("You come to a cliff with a huge canyon running in both directions. You see a way down into the canyon. You can 1. go into canyon 2. go back to camp").toLowerCase();
+                var trail3 = prompt("You come to a cliff with a huge canyon running in both directions. You see a way down into the canyon. \n You can \n 1. go into canyon \n 2. go back to camp").toLowerCase();
                 
                 if (trail3 == "go into canyon"){
                     Canyon();
@@ -99,11 +118,12 @@
                 var jungleHut = prompt("You reach the jungle hut.").toLowerCase();
             }
             
-            function 
+            function Gem(){
+                
+            }
             
             
             
             
         </script>
-    </body>
 </html>
