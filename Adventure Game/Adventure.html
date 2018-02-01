@@ -7,16 +7,17 @@
     <body>
         <h1> Adventure Game v0.1</h1>
         <p>By: Tucker Back</p>
-    </body>
         <script>
             
-            Jungle_Camp();
-            
             var inventory = {
+                coins:50,
                 jamanjiGem:0,
                 sword:0,
                 boomerang:0,
-                coins:10,
+                spear:0,
+                hatchet:0,
+                stolenKeys:0,
+                oldKey:0,
             }
             
             var player = {
@@ -24,6 +25,8 @@
                 thirst:"",
                 lives:3,
             }
+            
+            Jungle_Camp();
             
             function Start(){
                 player.firstname = prompt("What is your name explorer?");
@@ -41,9 +44,12 @@
             
             function Jungle_Camp(){
                 
-                var jungleCam = prompt("You arrive at a Jungle Camp. There are a few other explorers in the camp. You need to be the one to find the gem and return it to the Jaguar statue. You can see three paths, one leads to the north, one leads to the east, and one leads to the west.\n You can \n 1. go north \n 2. go east \n 3. go west").toLowerCase();
+                var jungleCam = prompt("You arrive at a Jungle Camp. There are a few other explorers in the camp and a little shop. You need to be the one to find the gem of Jamanji and return it to the Jaguar statue. You can see three paths, one leads to the north, one leads to the east, and one leads to the west.\n You can \n 1. go to shop \n 2. go north \n 3. go east \n 4. go west").toLowerCase();
                 
-                if(jungleCam == "go north"){
+                if(jungleCam == "go to shop"){
+                    Camp_Shop();
+                }
+                else if(jungleCam == "go north"){
                     Trail_2();
                 }
                 else if(jungleCam == "go east"){
@@ -57,6 +63,26 @@
                     Jungle_Camp();
                 }
                 
+            }
+            
+            function Camp_Shop(){
+                var camShop = prompt("You enter the shop and you walk up to the counter, You can buy a sword, boomerang, spear, hatchet, stolen keys,  and an old key. Each item costs 10 coins. \n You can \n 1. buy sword \n 2. buy boomerang \n 3. buy spear \n 4. buy hatchet \n 5. buy stolen keys \n 6. buy old key \n 7. leave shop").toLowerCase();
+                
+                if(camShop == "buy sword" ){
+                    if(camShop == inventory.coins >= 10 && inventory.sword <=1){
+                    inventory.coins = inventory.coins - 10;
+                    inventory.sword = 1;
+                    prompt("You now have a sword" + inventory.sword );
+                    Camp_Shop();
+                    }
+                    else{
+                        alert("You don't have enough coins to buy that!");
+                        Camp_Shop();
+                    }
+                }
+                else{
+                    Camp_Shop();
+                }
             }
             
             function Trail_1(){
@@ -123,7 +149,7 @@
             }
             
             
-            
-            
+             
         </script>
+    </body>
 </html>
