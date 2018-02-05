@@ -17,7 +17,7 @@
                 spear:0,
                 hatchet:0,
                 stolenKeys:0,
-                oldKey:0,
+                knife:0,
             }
             
             var player = {
@@ -66,19 +66,113 @@
             }
             
             function Camp_Shop(){
-                var camShop = prompt("You enter the shop and you walk up to the counter, You can buy a sword, boomerang, spear, hatchet, stolen keys,  and an old key. Each item costs 10 coins. \n You can \n 1. buy sword \n 2. buy boomerang \n 3. buy spear \n 4. buy hatchet \n 5. buy stolen keys \n 6. buy old key \n 7. leave shop").toLowerCase();
+                var camShop = prompt("You enter the shop and you walk up to the counter, You can buy a sword, boomerang, spear, hatchet, stolen keys,  and an old key. Each item costs 10 coins. You have " + inventory.coins + " coins. \n You can \n 1. buy sword \n 2. buy boomerang \n 3. buy spear \n 4. buy hatchet \n 5. buy stolen keys \n 6. buy knife \n 7. leave shop").toLowerCase();
                 
                 if(camShop == "buy sword" ){
-                    if(camShop == inventory.coins >= 10 && inventory.sword <=1){
-                    inventory.coins = inventory.coins - 10;
-                    inventory.sword = 1;
-                    prompt("You now have a sword" + inventory.sword );
-                    Camp_Shop();
-                    }
+                    if(inventory.coins >= 10)
+                        if(inventory.sword <= 0){
+                            inventory.coins = inventory.coins - 10;
+                            inventory.sword = 1;
+                            prompt("You now have a sword");
+                            Camp_Shop();
+                        }
+                        else{
+                        alert("You already have a sword!");
+                        Camp_Shop();
+                            }
                     else{
                         alert("You don't have enough coins to buy that!");
                         Camp_Shop();
                     }
+                }
+                if(camShop == "buy boomerang" ){
+                    if(inventory.coins >= 10)
+                        if(inventory.boomerang <= 0){
+                            inventory.coins = inventory.coins - 10;
+                            inventory.boomerang = 1;
+                            prompt("You now have a boomerang");
+                            Camp_Shop();
+                        }
+                        else{
+                        alert("You already have a boomerang!");
+                        Camp_Shop();
+                            }
+                    else{
+                        alert("You don't have enough coins to buy that!");
+                        Camp_Shop();
+                    }
+                }
+                if(camShop == "buy spear" ){
+                    if(inventory.coins >= 10)
+                        if(inventory.spear <= 0){
+                            inventory.coins = inventory.coins - 10;
+                            inventory.spear = 1;
+                            prompt("You now have a spear");
+                            Camp_Shop();
+                        }
+                        else{
+                        alert("You already have a spear!");
+                        Camp_Shop();
+                            }
+                    else{
+                        alert("You don't have enough coins to buy that!");
+                        Camp_Shop();
+                    }
+                }
+                if(camShop == "buy hatchet" ){
+                    if(inventory.coins >= 10)
+                        if(inventory.hatchet <= 0){
+                            inventory.coins = inventory.coins - 10;
+                            inventory.hatchet = 1;
+                            prompt("You now have a hatchet");
+                            Camp_Shop();
+                        }
+                        else{
+                        alert("You already have a hatchet!");
+                        Camp_Shop();
+                            }
+                    else{
+                        alert("You don't have enough coins to buy that!");
+                        Camp_Shop();
+                    }
+                }
+                if(camShop == "buy stolen keys" ){
+                    if(inventory.coins >= 10)
+                        if(inventory.stolenKeys <= 0){
+                            inventory.coins = inventory.coins - 10;
+                            inventory.stolenKeys = 1;
+                            prompt("You now have some stolen keys");
+                            Camp_Shop();
+                        }
+                        else{
+                        alert("You already have some stolen keys!");
+                        Camp_Shop();
+                            }
+                    else{
+                        alert("You don't have enough coins to buy that!");
+                        Camp_Shop();
+                    }
+                }
+                if(camShop == "buy knife" ){
+                    if(inventory.coins >= 10)
+                        if(inventory.knife <= 0){
+                            inventory.coins = inventory.coins - 10;
+                            inventory.knife = 1;
+                            prompt("You now have a knife");
+                            Camp_Shop();
+                        }
+                        else{
+                        alert("You already have a knife!");
+                        Camp_Shop();
+                            }
+                    else{
+                        alert("You don't have enough coins to buy that!");
+                        Camp_Shop();
+                    }
+                }
+                if(camShop == "leave shop"){
+                    alert("Have fun on your adventure! Come back soon! ...if your not dead.");
+                    Jungle_Camp();
                 }
                 else{
                     Camp_Shop();
@@ -86,21 +180,34 @@
             }
             
             function Trail_1(){
-                var trail1 = prompt("You begin your walk through the Jungle and find ").toLowerCase();
+                var trail1 = prompt("You begin your walk through the Jungle and find a sign that says beware! \n You can \n 1. continue on path \n 2. go back to camp").toLowerCase();
                 
-                if (jungleTrail == "straight" || jungleTrail == "go straight"){
-                    alert("You continue down the straight part of the trail.");  
+                if (trail1 == "continue on path"){
+                    alert("You continue down the trail.");
+                    Town();
+                }
+                else if(trail1 == "go back to camp"){
+                    Jungle_Camp();
+                }
+                else{
+                    Trail_1();
                 }
             }
             
             function Trail_2(){
-                var trail2 = prompt("You have come to a fork in the path. There is a sign that says go right to the tree house and go left to the river. \n You can \n 1. go to the tree house \n 2. go to the river").toLowerCase();
+                var trail2 = prompt("You have come to a fork in the path. There is a sign that says go right to the tree house and go left to the river. \n You can \n 1. go to the tree house \n 2. go to the river \n 3. go back to camp").toLowerCase();
                 
                 if (trail2 == "go to the tree house"){
                     Tree_House();
                 }
                 else if (trail2 == "go to the river"){
                     River();
+                }
+                else if(trail2 == "go back to camp"){
+                    Jungle_Camp();
+                }
+                else{
+                    Trail_2();
                 }
             }
             
@@ -114,7 +221,6 @@
                     Jungle_Camp();
                 }
                 else{
-                    alert("I don't understand " + jungleCam);
                     Trail_3();
                 }
             }
@@ -133,7 +239,11 @@
             }
             
             function Town(){
-                var town = prompt("You reach the town.").toLowerCase();
+                var town = prompt("You reach the town. You start to walk around the town and you walk down a dark alley. A bandit jumps out. \n You can \n 1. fight him with sword \n 2. try to run").toLowerCase();
+                
+                if (town == "fight him with sword"){
+                    var 
+                }
             }
             
             function Vehicle_Depot(){
