@@ -7,12 +7,13 @@
     <body>
         <h1> Adventure Game v0.1</h1>
         <p>By: Tucker Back</p>
+    </body>
         <script>
             
             var inventory = {
                 coins:50,
-                jamanjiGem:0,
-                sword:0,
+                jamanjiGem:1,
+                sword:1,
                 boomerang:0,
                 spear:0,
                 hatchet:0,
@@ -26,7 +27,7 @@
                 lives:3,
             }
             
-            Jungle_Camp();
+            River();
             
             function Start(){
                 player.firstname = prompt("What is your name explorer?");
@@ -44,7 +45,7 @@
             
             function Jungle_Camp(){
                 
-                var jungleCam = prompt("You arrive at a Jungle Camp. There are a few other explorers in the camp and a little shop. You need to be the one to find the gem of Jamanji and return it to the Jaguar statue. You can see three paths, one leads to the north, one leads to the east, and one leads to the west.\n You can \n 1. go to shop \n 2. go north \n 3. go east \n 4. go west").toLowerCase();
+                var jungleCam = prompt("You arrive at a Jungle Camp. There are a few other explorers in the camp and a little shop. You are given a gem. You need to return the gem to the Jaguar statue. You can see three paths, one leads to the north, one leads to the east, and one leads to the west.\n You can \n 1. go to shop \n 2. go north \n 3. go east \n 4. go west").toLowerCase();
                 
                 if(jungleCam == "go to shop"){
                     Camp_Shop();
@@ -225,8 +226,47 @@
                 }
             }
             
+            function Trail_4(){
+                var trail4 = prompt("You kill the Bandit and make your way out of the town and you find two paths. one leads to the river and the other leads to the jungle hut \n You can \n 1. go to the river \n 2. go to the jungle hut").toLowerCase();
+                
+                if(trail4 == "go to the river"){
+                    River();
+                }
+                else if(trail4 == "go to the jungle hut"){
+                    Jungle_Hut();
+                }
+                else{
+                    Trail_4(); 
+                }
+            }
+            
+            function Trail_5(){
+                var trail5 = prompt("You come to a fork in the path. \n You can \n 1. go left \n 2. go right ").toLowerCase
+                
+                if(trail5 == "go left"){
+                    Jungle_Hut();
+                }
+                else if(trail5 == "go right"){
+                    Jaguar_Statue();
+                }
+            }
+            
+            function Trail_6(){
+                var trail6 = prompt("you are here").toLowerCase();
+            }
+            
+            function Trial_7(){
+                var trail7 = prompt("you are now here").toLowerCase();
+            }
+            
             function Canyon(){
-                var canyon = prompt("You have entered the the canyon. and have ").toLowerCase();
+                var canyon = prompt("You have entered the the canyon. and you are walking in the canyon and a theif is above and is trying to shoot you with a gun. \n You can \n 1. use boomrang \n 2. run ").toLowerCase();
+                
+                if(canyon == "use boomrang"){
+                    if(inventory.boomerang == 1){
+                        
+                    }
+                }
                 Canyon();
             }
             
@@ -235,14 +275,41 @@
             }
             
             function River(){
-                var river = prompt("You reach the river.").toLowerCase();
+                var river = prompt("You reach the river. The trail ends at the edge of the water. The water might be to strong to walk through. But there is a tree that if cut down the right way could make a nice bridge. \n You can \n 1. use hatchet \n 2. walk through the river").toLowerCase();
+                
+                if(river == "use hatchet"){
+                    if(inventory.hatchet == 1){
+                        Trail_5();
+                    }
+                    else{
+                        alert("You don't have a hatchet");
+                        River();
+                    }
+                }
+                else if(river == "walk through the river"){
+                    alert("Trying to walk through the river you slip and hit you head on a rock in the water.");
+                    Death();
+                }
+                else{
+                    River();
+                }
             }
             
             function Town(){
-                var town = prompt("You reach the town. You start to walk around the town and you walk down a dark alley. A bandit jumps out. \n You can \n 1. fight him with sword \n 2. try to run").toLowerCase();
+                var town = prompt("You reach the town. You start to walk around the town and you walk down a dark alley. A bandit jumps out. \n You can \n 1. fight him with sword \n 2. run").toLowerCase();
                 
                 if (town == "fight him with sword"){
-                    var 
+                    if(inventory.sword == 1){
+                       Trail_4(); 
+                    }
+                    else{
+                        alert("You don't have a hatchet");
+                        Town();
+                    }
+                }
+                else if(town == "run"){
+                    alert("You almost out run the bandit but you run into a dead end. The bandit kills you.");
+                    Death();
                 }
             }
             
@@ -254,12 +321,15 @@
                 var jungleHut = prompt("You reach the jungle hut.").toLowerCase();
             }
             
-            function Gem(){
+            function Jaguar_Statue(){
                 
+            }
+            
+            function Death(){
+                alert("YOU DIED \nGAME OVER")
             }
             
             
              
         </script>
-    </body>
 </html>
