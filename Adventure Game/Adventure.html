@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Adventure Game</title>
+        <title>Jumanji Game</title>
        <link href="style.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-        <h1> Adventure Game v0.1</h1>
+        <h1> Jumanji Game v0.1</h1>
         <p>By: Tucker Back</p>
     </body>
         <script>
             
             var inventory = {
                 coins:50,
-                jamanjiGem:1,
-                sword:1,
+                sword:0,
                 boomerang:0,
                 spear:0,
                 hatchet:0,
@@ -23,22 +22,20 @@
             
             var player = {
                 firstname:"",
-                thirst:"",
-                lives:3,
             }
             
-            River();
+            Start();
             
             function Start(){
                 player.firstname = prompt("What is your name explorer?");
-                alert("Welcome to Jamanji " + player.firstname);
+                alert("Welcome to Jumanji " + player.firstname);
                 var beginAdv = confirm("Are you ready to begin your adventure?");
                 
                 if(beginAdv){
                     Jungle_Camp();
                 }
                 else{
-                    alert("But Jamanji needs you!");
+                    alert("But Jumanji needs you!");
                 }
                 
             }
@@ -249,29 +246,82 @@
                 else if(trail5 == "go right"){
                     Jaguar_Statue();
                 }
+                else{
+                    Trail_5();
+                }
             }
             
             function Trail_6(){
-                var trail6 = prompt("you are here").toLowerCase();
+                var trail6 = prompt("You find a trail it forks off going in two directions. \n You can \n 1. go left \n 2. go right").toLowerCase();
+                
+                if(trail6 == "go left"){
+                    Jaguar_Statue();
+                }
+                else if(trail6 == "go right"){
+                    Vehicle_Depot();
+                }
+                else{
+                    Trail_6();
+                }
             }
             
-            function Trial_7(){
-                var trail7 = prompt("you are now here").toLowerCase();
+            function Trail_7(){
+                var trail7 = prompt("You come out of the canyon and find a path that goes in two directions \n You can \n 1. go left \n 2. go right").toLowerCase();
+                
+                if(trail7 == "go left"){
+                    Tree_House();
+                }
+                else if(trail7 == "go right"){
+                    Vehicle_Depot();
+                }
+                else{
+                    Trail_7();
+                }
             }
             
             function Canyon(){
-                var canyon = prompt("You have entered the the canyon. and you are walking in the canyon and a theif is above and is trying to shoot you with a gun. \n You can \n 1. use boomrang \n 2. run ").toLowerCase();
+                var canyon = prompt("You have entered the the canyon. and you are walking in the canyon and a theif is above and is trying to shoot you with a gun. \n You can \n 1. use boomerang \n 2. run ").toLowerCase();
                 
-                if(canyon == "use boomrang"){
+                if(canyon == "use boomerang"){
                     if(inventory.boomerang == 1){
-                        
+                        alert("You hit the theif and he falls!");
+                        Trail_7();
+                    }
+                    else{
+                        alert("You don't have a boomerang. The theif doesn't wait for you and kills you on the spot.");
+                        Death();
                     }
                 }
+                else if(canyon == "run"){
+                    alert("When you try and run the theif shoots you");
+                    Death();   
+                }
+                else{
                 Canyon();
+                }
             }
             
             function Tree_House(){
-                var treeHouse = prompt("You reach the tree house.").toLowerCase();
+                var treeHouse = prompt("You reach the tree house. You climb into the tree house. as you are exploring a Jaguar attacks you. You need to react fast. \n You can \n 1. use knife \n 2. run").toLowerCase();
+                
+                if(treeHouse == "use knife"){
+                    if(inventory.knife == 1){
+                        alert("You are able to get the knife out in time to defend yourself! You kill the Jaguar.");
+                        Trail_6();
+                    }
+                    else{
+                        alert("You don't have a knife. The Jaguar jumps on you and starts to eat you.");
+                        Death();
+                    }
+                }
+                else if(treeHouse == "run"){
+                    alert("When you try and run the Jaguar catches you and kill you.");
+                    Death();   
+                }
+                else{
+                treeHouse();
+                }
+                
             }
             
             function River(){
@@ -303,25 +353,73 @@
                        Trail_4(); 
                     }
                     else{
-                        alert("You don't have a hatchet");
-                        Town();
+                        alert("You don't have a sword. So try to stop him with your fist which doesn't work when he cuts straight through you.");
+                        Death();
                     }
                 }
                 else if(town == "run"){
                     alert("You almost out run the bandit but you run into a dead end. The bandit kills you.");
                     Death();
                 }
+                else{
+                    town();
+                }
             }
             
             function Vehicle_Depot(){
-                var vehicleDepot = prompt("You reach the vehicle depot.").toLowerCase();
+                var vehicleDepot = prompt("You reach the vehicle depot. You sneak into the depot and see a helicopter. Then you hear people coming. \n You can \n 1. use keys \n 2. run").toLowerCase();
+                
+                if (vehicleDepot == "use keys"){
+                    if(inventory.stolenKeys == 1){
+                       alert("You are able to get the helicopter started are able to fly away.");
+                        Jaguar_Statue();
+                    }
+                    else{
+                        alert("You don't have keys. They bad guys get into the depot and kill you.");
+                        Death();
+                    }
+                }
+                else if(vehicleDepot == "run"){
+                    alert("You almost out run them but they had veicles. So when they caught up to you they killed you.");
+                    Death();
+                }
+                else{
+                    Vehicle_Depot();
+                }
             }
             
             function Jungle_Hut(){
-                var jungleHut = prompt("You reach the jungle hut.").toLowerCase();
+                var jungleHut = prompt("You reach the jungle hut. You go inside to find supplys. while you are looking around a Rhino comes crashing through the hut you barly miss the attack. \n You can \n 1. use spear \n 2. run").toLowerCase();
+                
+                if (jungleHut == "use keys"){
+                    if(inventory.spear == 1){
+                       alert("You are able to throw the spear into the rhino to bring it down.");
+                        Jaguar_Statue();
+                    }
+                    else{
+                        alert("You don't have a spear. You didn't get as lucky this time, the rhino smashed you into bits.");
+                        Death();
+                    }
+                }
+                else if(jungleHut == "run"){
+                    alert("Did you really try and out run a rhino. It didn't take long for him to run you over.");
+                    Death();
+                }
+                else{
+                    Jungle_Hut();
+                }
             }
             
             function Jaguar_Statue(){
+                var jaguarStatue = prompt("You reach the Jaguar Statue. You climb to the top and put the gem in the statue now call out it's name").toLowerCase();
+                
+                if(jaguarStatue == "jumanji"){
+                   alert("Thank You! " + player.firstname + "you have saved Jumanji."); 
+                }
+                else{ 
+                alert("Are you dumb you just need to call out Jumanji.");
+                Jaguar_Statue();
+                }
                 
             }
             
