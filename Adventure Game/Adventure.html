@@ -11,13 +11,13 @@
         <script>
             
             var inventory = {
-                coins:50,
-                sword:0,
-                boomerang:0,
-                spear:0,
-                hatchet:0,
-                stolenKeys:0,
-                knife:0,
+                coins:30,
+                sword:1,
+                boomerang:1,
+                spear:1,
+                hatchet:1,
+                stolenKeys:1,
+                knife:1,
             }
             
             var player = {
@@ -238,7 +238,7 @@
             }
             
             function Trail_5(){
-                var trail5 = prompt("You come to a fork in the path. \n You can \n 1. go left \n 2. go right ").toLowerCase
+                var trail5 = prompt("You come to a fork in the path. \n You can \n 1. go left \n 2. go right ").toLowerCase();
                 
                 if(trail5 == "go left"){
                     Jungle_Hut();
@@ -391,7 +391,7 @@
             function Jungle_Hut(){
                 var jungleHut = prompt("You reach the jungle hut. You go inside to find supplys. while you are looking around a Rhino comes crashing through the hut you barly miss the attack. \n You can \n 1. use spear \n 2. run").toLowerCase();
                 
-                if (jungleHut == "use keys"){
+                if (jungleHut == "use spear"){
                     if(inventory.spear == 1){
                        alert("You are able to throw the spear into the rhino to bring it down.");
                         Jaguar_Statue();
@@ -414,7 +414,7 @@
                 var jaguarStatue = prompt("You reach the Jaguar Statue. You climb to the top and put the gem in the statue now call out it's name").toLowerCase();
                 
                 if(jaguarStatue == "jumanji"){
-                   alert("Thank You! " + player.firstname + "you have saved Jumanji."); 
+                   alert("Thank You! " + player.firstname + ", you have saved Jumanji."); 
                 }
                 else{ 
                 alert("Are you dumb you just need to call out Jumanji.");
@@ -424,7 +424,7 @@
             }
             
             function Death(){
-                alert("YOU DIED \nGAME OVER")
+                alert("YOU DIED \nGAME OVER");
             }
             
             
