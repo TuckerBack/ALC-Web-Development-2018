@@ -2,7 +2,6 @@
 <html lang="en">
     <head>
         <title>Jumanji Game</title>
-       <link href="style.css" rel="stylesheet" type="text/css">
     </head>
     <body>
         <h1> Jumanji Game v0.1</h1>
@@ -12,12 +11,12 @@
             
             var inventory = {
                 coins:30,
-                sword:1,
-                boomerang:1,
-                spear:1,
-                hatchet:1,
-                stolenKeys:1,
-                knife:1,
+                sword:0,
+                boomerang:0,
+                spear:0,
+                hatchet:0,
+                stolenKeys:0,
+                knife:0,
             }
             
             var player = {
@@ -66,115 +65,123 @@
             function Camp_Shop(){
                 var camShop = prompt("You enter the shop and you walk up to the counter, You can buy a sword, boomerang, spear, hatchet, stolen keys,  and an old key. Each item costs 10 coins. You have " + inventory.coins + " coins. \n You can \n 1. buy sword \n 2. buy boomerang \n 3. buy spear \n 4. buy hatchet \n 5. buy stolen keys \n 6. buy knife \n 7. leave shop").toLowerCase();
                 
-                if(camShop == "buy sword" ){
-                    if(inventory.coins >= 10)
-                        if(inventory.sword <= 0){
-                            inventory.coins = inventory.coins - 10;
-                            inventory.sword = 1;
-                            prompt("You now have a sword");
-                            Camp_Shop();
+                switch(camShop){
+                    case "buy sword":
+                        if(inventory.coins >= 10){
+                            if(inventory.sword <= 0){
+                                inventory.coins = inventory.coins - 10;
+                                inventory.sword = 1;
+                                alert("You now have a sword");
+                                Camp_Shop();
+                            }
+                            else{
+                                alert("You already have a sword!");
+                                Camp_Shop();
+                            }
                         }
                         else{
-                        alert("You already have a sword!");
-                        Camp_Shop();
-                            }
-                    else{
-                        alert("You don't have enough coins to buy that!");
-                        Camp_Shop();
-                    }
-                }
-                if(camShop == "buy boomerang" ){
-                    if(inventory.coins >= 10)
-                        if(inventory.boomerang <= 0){
-                            inventory.coins = inventory.coins - 10;
-                            inventory.boomerang = 1;
-                            prompt("You now have a boomerang");
+                            alert("You don't have enough coins to buy that!");
                             Camp_Shop();
                         }
-                        else{
-                        alert("You already have a boomerang!");
-                        Camp_Shop();
+                    break;
+                    case "buy boomerang":
+                        if(inventory.coins >= 10){
+                            if(inventory.boomerang <= 0){
+                                inventory.coins = inventory.coins - 10;
+                                inventory.boomerang = 1;
+                                prompt("You now have a boomerang");
+                                Camp_Shop();
                             }
-                    else{
-                        alert("You don't have enough coins to buy that!");
-                        Camp_Shop();
-                    }
-                }
-                if(camShop == "buy spear" ){
-                    if(inventory.coins >= 10)
-                        if(inventory.spear <= 0){
-                            inventory.coins = inventory.coins - 10;
-                            inventory.spear = 1;
-                            prompt("You now have a spear");
-                            Camp_Shop();
+                            else{
+                                alert("You already have a boomerang!");
+                                Camp_Shop();
+                                }
                         }
                         else{
-                        alert("You already have a spear!");
-                        Camp_Shop();
-                            }
-                    else{
-                        alert("You don't have enough coins to buy that!");
-                        Camp_Shop();
-                    }
-                }
-                if(camShop == "buy hatchet" ){
-                    if(inventory.coins >= 10)
-                        if(inventory.hatchet <= 0){
-                            inventory.coins = inventory.coins - 10;
-                            inventory.hatchet = 1;
-                            prompt("You now have a hatchet");
+                            alert("You don't have enough coins to buy that!");
                             Camp_Shop();
+                            }
+                    break;
+                    case "buy spear":
+                        if(inventory.coins >= 10){
+                            if(inventory.spear <= 0){
+                                inventory.coins = inventory.coins - 10;
+                                inventory.spear = 1;
+                                prompt("You now have a spear");
+                                Camp_Shop();
+                            }
+                            else{
+                                alert("You already have a spear!");
+                                Camp_Shop();
+                            }
                         }
                         else{
-                        alert("You already have a hatchet!");
-                        Camp_Shop();
-                            }
-                    else{
-                        alert("You don't have enough coins to buy that!");
-                        Camp_Shop();
-                    }
-                }
-                if(camShop == "buy stolen keys" ){
-                    if(inventory.coins >= 10)
-                        if(inventory.stolenKeys <= 0){
-                            inventory.coins = inventory.coins - 10;
-                            inventory.stolenKeys = 1;
-                            prompt("You now have some stolen keys");
+                            alert("You don't have enough coins to buy that!");
                             Camp_Shop();
+                            }
+                    break;
+                    case "buy hatchet":
+                        if(inventory.coins >= 10){
+                            if(inventory.hatchet <= 0){
+                                inventory.coins = inventory.coins - 10;
+                                inventory.hatchet = 1;
+                                prompt("You now have a hatchet");
+                                Camp_Shop();
+                            }
+                            else{
+                                alert("You already have a hatchet!");
+                                Camp_Shop();
+                                }
                         }
                         else{
-                        alert("You already have some stolen keys!");
-                        Camp_Shop();
-                            }
-                    else{
-                        alert("You don't have enough coins to buy that!");
-                        Camp_Shop();
-                    }
-                }
-                if(camShop == "buy knife" ){
-                    if(inventory.coins >= 10)
-                        if(inventory.knife <= 0){
-                            inventory.coins = inventory.coins - 10;
-                            inventory.knife = 1;
-                            prompt("You now have a knife");
+                            alert("You don't have enough coins to buy that!");
                             Camp_Shop();
+                            }
+                    break;
+                    case "buy stolen keys":
+                        if(inventory.coins >= 10){
+                            if(inventory.stolenKeys <= 0){
+                                inventory.coins = inventory.coins - 10;
+                                inventory.stolenKeys = 1;
+                                prompt("You now have some stolen keys");
+                                Camp_Shop();
+                            }
+                            else{
+                                alert("You already have some stolen keys!");
+                                Camp_Shop();
+                                }
                         }
                         else{
-                        alert("You already have a knife!");
-                        Camp_Shop();
+                            alert("You don't have enough coins to buy that!");
+                            Camp_Shop();
                             }
-                    else{
-                        alert("You don't have enough coins to buy that!");
+                    break;
+                    case "buy knife":
+                        if(inventory.coins >= 10){
+                            if(inventory.knife <= 0){
+                                inventory.coins = inventory.coins - 10;
+                                inventory.knife = 1;
+                                prompt("You now have a knife");
+                                Camp_Shop();
+                                }
+                            else{
+                            alert("You already have a knife!");
+                            Camp_Shop();
+                                }
+                        }
+                        else{
+                            alert("You don't have enough coins to buy that!");
+                            Camp_Shop();
+                            }
+                    break;
+                    case "leave shop":
+                        alert("Have fun on your adventure! Come back soon! ...if your not dead.");
+                        Jungle_Camp();
+                    break;
+                    default:
                         Camp_Shop();
+                    break;
                     }
-                }
-                if(camShop == "leave shop"){
-                    alert("Have fun on your adventure! Come back soon! ...if your not dead.");
-                    Jungle_Camp();
-                }
-                else{
-                    Camp_Shop();
-                }
             }
             
             function Trail_1(){
@@ -426,8 +433,6 @@
             function Death(){
                 alert("YOU DIED \nGAME OVER");
             }
-            
-            
-             
-        </script>
+    
+    </script>
 </html>
