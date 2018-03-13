@@ -160,7 +160,44 @@ body {
 
 .btn:hover {
     background-color: #000000;
+    color: white;
+    transition: all .4s ease-out;
 }
+
+.btn2 {
+    margin-right: 10px;
+    border: 1px solid #2979FF;
+    border-radius: 50px;
+    background-color: transparent;
+    color: rgba(0,0,0, 0.87);
+    width: 96px;
+    height: 48px;
+    outline: none;
+    color: #2979FF;
+    transition: all .4s ease-out;
+    float: right;
+}
+
+.btn2:hover {
+    background-color: #2979FF;
+    color: white;
+    transition: all .4s ease-out;
+}
+
+.btn2:active {
+    outline: none;
+}
+
+.red500 {background-color: #F44336;}
+
+.orange500  {background-color: #FF9800;}
+
+.yellow500  {background-color: #FFEB3B;}
+
+.green500  {background-color: #4CAF50;}
+
+.inigo500  {background-color: #3F51B5;}
+
 
 
 
