@@ -1,0 +1,17 @@
+/* Stylesheet for Portfolio */
+
+html, body, div, header, h1, h2, h3, h4, h5, h6, nav, ul, ol, li, p, footer{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    min-height: 100%;
+}
+
+body{
+    background: linear-gradient(black, green);
+    background-repeat: no-repeat;
+    color: limegreen;
+    font-family: sans-serif;
+}
