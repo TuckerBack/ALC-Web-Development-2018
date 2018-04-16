@@ -9,9 +9,65 @@ html{
     min-height: 100%;
 }
 
-body{
-    background: linear-gradient(black, green);
-    background-repeat: no-repeat;
-    color: limegreen;
-    font-family: sans-serif;
+#logoPic {
+    width: 100px;
+    height: 100px;
+}
+
+header {
+    display: flex;
+    flex-flow: row;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    background-color: #BF7A4A;
+}
+
+#topTitle {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 20px;
+    font-family: Do Hyeon;
+    font-size: 50px;
+    color: black;
+}
+
+nav {
+    width:100%;
+    background-color: #548C4F;
+    clear: both;
+    font-family: Gugi;
+    font-size: 14px;
+    box-shadow: 3px 3px 3px #000000;
+    
+}
+
+nav ul {
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    list-style:none;
+}
+
+nav ul li {
+    float:left;
+}
+
+nav ul li a {
+    display:block;
+    color: black;
+    text-align:center;
+    text-decoration:none;
+    padding:14px 16px;
+}
+
+nav ul li a:hover {
+    background-color: #1F481A;
+    color: white;
+}
+
+.active{
+    background-color: #994515;
 }
