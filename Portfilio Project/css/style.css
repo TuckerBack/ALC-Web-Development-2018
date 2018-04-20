@@ -91,7 +91,39 @@ p {
     margin-bottom: 15px;
 }
 
-lowPoly {
-    width: 10%;
-    height: 10%;
+.place {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 100px;
+    width: 1000px;
+    height: auto;
+    border: 10px outset #BF7A4A;
+    background-color: #548C4F;
+}
+
+#lowPoly {
+    margin: 25px;
+    width: 50%;
+    height: auto;
+    background-color: black;
+    padding: 10px;
+    align-self: center;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    width: 100%;
+    text-align: center;
+    align-self: baseline;
+    padding: 25px;
 }
