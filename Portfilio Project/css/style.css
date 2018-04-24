@@ -99,7 +99,7 @@ p {
 
 .box{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
     margin-top: 25px;
     margin-bottom: 25px;
@@ -110,9 +110,43 @@ p {
     background-color: #548C4F;
 }
 
+@media screen and (max-width: 992px) and (min-width: 600px) {
+   .box{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        margin-left: 100px;
+        width: 500px;
+        height: auto;
+        border: 10px outset #BF7A4A;
+        background-color: black;
+        color: white;
+    } 
+}
+
 #lowPoly {
     margin: 25px;
-    width: 50%;
+    width: 60%;
+    height: auto;
+    background-color: black;
+    padding: 10px;
+    align-self: center;
+}
+
+#hallow {
+    margin: 25px;
+    width: 75%;
+    height: auto;
+    background-color: white;
+    padding: 10px;
+    align-self: center;
+}
+
+#card {
+    margin: 25px;
+    width: 75%;
     height: auto;
     background-color: black;
     padding: 10px;
@@ -126,4 +160,5 @@ footer{
     text-align: center;
     align-self: baseline;
     padding: 25px;
+    
 }
