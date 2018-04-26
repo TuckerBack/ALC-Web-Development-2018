@@ -97,7 +97,7 @@ p {
     flex-wrap: wrap;
 }
 
-.box{
+figure{
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -111,7 +111,7 @@ p {
 }
 
 @media screen and (max-width: 992px) and (min-width: 600px) {
-   .box{
+figure{
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
