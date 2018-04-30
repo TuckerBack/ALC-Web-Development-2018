@@ -22,7 +22,7 @@ header {
     padding-top: 20px;
     padding-left: 20px;
     padding-bottom: 20px;
-    background-color: #BF7A4A;
+    background-color: #4aa8bf;
 }
 
 #topTitle {
@@ -36,7 +36,7 @@ header {
 
 nav {
     width:100%;
-    background-color: #548C4F;
+    background-color: #009A4E;
     clear: both;
     font-family: Gugi;
     font-size: 18px;
@@ -73,7 +73,7 @@ nav ul li a:hover {
 }
 
 body {
-    background-color: #38593C;
+    background-color: #009A4E;
 }
 
 h1 {
@@ -91,10 +91,12 @@ p {
     margin-bottom: 15px;
 }
 
-.place {
+#place {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 50px;
 }
 
 figure{
@@ -104,7 +106,7 @@ figure{
     margin-top: 25px;
     margin-bottom: 25px;
     margin-left: 100px;
-    width: 1000px;
+    width: 300px;
     height: auto;
     border: 10px outset #BF7A4A;
     background-color: #548C4F;
@@ -124,6 +126,13 @@ figure{
         background-color: black;
         color: white;
     } 
+}
+
+figcaption {
+    text-align: center;
+    margin: 10px;
+    font-family: Gugi;
+    font-size: 25px;
 }
 
 #lowPoly {
