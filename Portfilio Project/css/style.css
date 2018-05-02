@@ -22,7 +22,7 @@ header {
     padding-top: 20px;
     padding-left: 20px;
     padding-bottom: 20px;
-    background-color: #4aa8bf;
+    background-color: #8C2C17;
 }
 
 #topTitle {
@@ -31,17 +31,17 @@ header {
     margin-left: 20px;
     font-family: Black Han Sans;
     font-size: 50px;
-    color: black;
+    color: #333333;
 }
 
 nav {
     width:100%;
-    background-color: #009A4E;
+    background-color: #34599C;
     clear: both;
     font-family: Gugi;
     font-size: 18px;
     box-shadow: 3px 3px 3px #000000;
-    
+    color: #333333;
 }
 
 nav ul {
@@ -49,10 +49,12 @@ nav ul {
     padding:0;
     overflow:hidden;
     list-style:none;
+    color: #333333;
 }
 
 nav ul li {
     float:left;
+    color: #333333;
 }
 
 nav ul li a {
@@ -61,19 +63,21 @@ nav ul li a {
     text-align:center;
     text-decoration:none;
     padding:14px 16px;
+    color: #333333;
 }
 
 nav ul li a:hover {
-    background-color: #294820;
-    color: white;
+    background-color: #0F157F;
+    color: #d1d1d1;
 }
 
 .active{
-    background-color: #994515;
+    background-color: #3353F0;
+    color: #333333;
 }
 
 body {
-    background-color: #009A4E;
+    background-color: #A63B33;
 }
 
 h1 {
@@ -81,6 +85,7 @@ h1 {
     margin-left: 20px;
     font-size: 40px;
     font-family: Black Han Sans;
+    color: #333333;
 }
 
 p {
@@ -89,6 +94,7 @@ p {
     margin-right: 20px;
     margin-top: 15px;
     margin-bottom: 15px;
+    color: #333333;
 }
 
 #place {
@@ -108,8 +114,9 @@ figure{
     margin-left: 100px;
     width: 300px;
     height: auto;
-    border: 10px outset #BF7A4A;
-    background-color: #548C4F;
+    border: 10px outset #0F157F;
+    background-color: #8C2C17;
+    color: #333333;
 }
 
 @media screen and (max-width: 992px) and (min-width: 600px) {
@@ -133,6 +140,7 @@ figcaption {
     margin: 10px;
     font-family: Gugi;
     font-size: 25px;
+    
 }
 
 #lowPoly {
@@ -160,6 +168,10 @@ figcaption {
     background-color: black;
     padding: 10px;
     align-self: center;
+}
+
+#cards {
+    margin: auto;
 }
 
 footer{
