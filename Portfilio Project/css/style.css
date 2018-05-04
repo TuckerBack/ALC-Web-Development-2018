@@ -79,6 +79,11 @@ nav ul li a:hover {
 body {
     background-color: #A63B33;
 }
+#tucker{
+    width: 300px;
+    height: 375px;
+    margin: 10px;
+}
 
 h1 {
     margin-top: 20px;
@@ -88,7 +93,15 @@ h1 {
     color: #333333;
 }
 
+#about{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: ;
+}
+
 p {
+    width: 2500px;
     font-size: 20px;
     margin-left: 20px;
     margin-right: 20px;
@@ -138,7 +151,7 @@ figure{
 figcaption {
     text-align: center;
     margin: 10px;
-    font-family: Gugi;
+    font-family: Do Hyeon;
     font-size: 25px;
     
 }
@@ -172,6 +185,44 @@ figcaption {
 
 #cards {
     margin: auto;
+}
+
+
+#BlogPost{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 95%;
+    justify-content: center;
+    background-color: dimgrey;
+    box-shadow: 3px 3px 3px grey;
+    margin: 15px;
+    padding: 10px;
+}
+
+#PostVid{
+    width: 500px;
+    height: 300px;
+}
+
+#form-contact{
+    margin: 20px;
+    color: #333333;
+    font-family: Do Hyeon;
+    font-size: 20px;
+}
+
+button#button-contact{
+    width:100px;
+    height:40px;
+    font-weight:500;
+    margin-top:10px;
+    margin-bottom:15px;
+    box-shadow: 1px 1px 5px #34599C;
+    color: #333333;
+    background-color: #34599C;
+    font-family: Do Hyeon;
+    font-size: 15px;
 }
 
 footer{

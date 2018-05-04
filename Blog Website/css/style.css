@@ -59,7 +59,7 @@ img#PostImg{
 
 div#PostBody{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     margin: 0 10px;
     font-family: 'Exo 2', sans-serif;
