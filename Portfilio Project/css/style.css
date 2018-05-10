@@ -1,9 +1,12 @@
 /* Stylesheet for Portfolio */
 
+/* Reset */
 html, body, div, header, h1, h2, h3, h4, h5, h6, nav, ul, ol, li, p, footer{
     margin: 0;
     padding: 0;
 }
+
+/* Universal Style */
 
 html{
     min-height: 100%;
@@ -15,6 +18,8 @@ html{
     margin: auto;
     background-color: #333333;
 }
+
+/* Head */
 
 #logoPic {
     width: 100px;
@@ -40,6 +45,16 @@ header {
     font-size: 50px;
     color: #ffffff;
 }
+
+h1 {
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 40px;
+    font-family: Black Han Sans;
+    color: #ffffff;
+}
+
+/* Navigaion */
 
 nav {
     width:100%;
@@ -87,18 +102,12 @@ body {
     background-color: #469C42;
 }
 
+/* About */
+
 #tucker{
     width: 300px;
     height: 375px;
     margin: 10px;
-}
-
-h1 {
-    margin-top: 20px;
-    margin-left: 20px;
-    font-size: 40px;
-    font-family: Black Han Sans;
-    color: #ffffff;
 }
 
 #about{
@@ -108,7 +117,7 @@ h1 {
     justify-content: ;
 }
 
-p {
+#FirstP {
     width: 2500px;
     font-size: 20px;
     margin-left: 20px;
@@ -117,6 +126,8 @@ p {
     margin-bottom: 15px;
     color: #ffffff;
 }
+
+/* Portfolio */
 
 #place {
     display: flex;
@@ -141,7 +152,7 @@ figure{
     color: #ffffff;
 }
 
-@media screen and (max-width: 992px) and (min-width: 600px) {
+@media screen and (max-width: 426px) and (min-width: 0px) {
 figure{
         width:250px;
         float:left;
@@ -193,11 +204,13 @@ figcaption {
     margin: auto;
 }
 
+/* Skill & Awards */
 
 #BlogPost{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    justify-content: flex-start; 
     width: 75%;
     background-color: #469C42;
     border: 5px outset #297010;
@@ -205,10 +218,39 @@ figcaption {
     padding: 10px;
 }
 
+#Bob {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    margin-left: 15px;
+}
+
 #PostVid{
     width: 500px;
     height: 300px;
 }
+
+.PostBody{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    margin: 10px;
+}
+
+#PostTitle{
+    font-size: 50px;
+    font-family: Do Hyeon;
+    color: white;
+}
+
+#PostText {
+    font-size: 20px;
+    color: #ffffff;
+}
+
+/* Contact */
 
 #form-contact{
     margin: 20px;
@@ -229,6 +271,8 @@ button#button-contact{
     font-family: Do Hyeon;
     font-size: 15px;
 }
+
+/* Footer */
 
 footer{
     background-color: black;
