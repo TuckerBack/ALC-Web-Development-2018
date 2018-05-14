@@ -19,11 +19,27 @@ html{
     background-color: #333333;
 }
 
+@media screen and (max-width:600px) {
+   #container{
+        width: auto;
+        border: 10px outset #297010;
+        margin: auto;
+        background-color: #333333;
+    }
+}
+
 /* Head */
 
 #logoPic {
     width: 100px;
     height: 100px;
+}
+
+@media screen and (max-width:600px) {
+    #logoPic {
+        width: 75px;
+        height: 75px;
+}
 }
 
 header {
@@ -44,6 +60,17 @@ header {
     font-family: Black Han Sans;
     font-size: 50px;
     color: #ffffff;
+}
+
+@media screen and (max-width:600px) {
+    #topTitle {
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 10px;
+        font-family: Black Han Sans;
+        font-size: 38px;
+        color: #ffffff;
+    }
 }
 
 h1 {
@@ -80,12 +107,24 @@ nav ul li {
 }
 
 nav ul li a {
-    display:block;
+    display:flex;
     color: black;
     text-align:center;
     text-decoration:none;
     padding:14px 16px;
     color: #ffffff;
+}
+
+@media screen and (max-width:600px) {
+    nav ul li a {
+        display:flex;
+        flex-direction: column;
+        color: black;
+        text-align:center;
+        text-decoration:none;
+        padding:14px 16px;
+        color: #ffffff;
+    }
 }
 
 nav ul li a:hover {
@@ -152,15 +191,6 @@ figure{
     color: #ffffff;
 }
 
-@media screen and (max-width: 426px) and (min-width: 0px) {
-figure{
-        width:250px;
-        float:left;
-        box-shadow:2px 2px 10px #000;
-        background-color: black;
-        color: white;
-    } 
-}
 
 figcaption {
     text-align: center;
